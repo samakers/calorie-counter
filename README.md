@@ -8,7 +8,7 @@ This app provides the number of calories based on the result of a user search
 for a type of food. The U.S. Department of Agriculture MyPyramid Food Raw Data
 will be searched to determine the calorie values.
 
-## User Stories
+## User Story
 
 - [x] Create a JSON file containing the food items to be
       searched. This will be loaded when the app is started.
