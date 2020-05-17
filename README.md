@@ -22,9 +22,6 @@ will be searched to determine the calorie values.
       calories in a scrollable results panel that is limited to 25 entries.
 - [ ] User can click on the 'Clear' button to clear the search terms and
       results list.
-
-## Bonus features
-
 - [ ] User can see the count of the number of matching food items adjacent to
       the results list.
 - [ ] User can use a wildcard character in search terms.
@@ -35,8 +32,4 @@ will be searched to determine the calorie values.
 
 ## Useful links and resources
 
-[MyPyramid Food Raw Data](https://catalog.data.gov/dataset/mypyramid-food-raw-data-f9ed6)
-
-## Example projects
-
-[Food Calculator](https://www.webmd.com/diet/healthtool-food-calorie-counter)
+[MyPyramid Food Raw Data](https://catalog.data.gov/dataset/mypyramid-food-raw-data)
