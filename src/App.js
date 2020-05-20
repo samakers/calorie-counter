@@ -1,10 +1,12 @@
 import React from "react";
-import Search from "./components/search";
+import MainSection from "./components/MainSection";
+import AppBar from "./components/Navbar";
 
 function App() {
   return (
     <React.Fragment>
-      <Search />
+      <AppBar />
+      <MainSection />
     </React.Fragment>
   );
 }
