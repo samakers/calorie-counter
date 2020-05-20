@@ -16,11 +16,18 @@ class MainSection extends Component {
     };
 
     const displayFood = FoodData.map((element) => {
-      // console.log(element.Display_Name);
-      return <FoodPreview foodName={element.Display_Name} />;
+      if (this.state.text.length !== 0) {
+        if (element.Display_Name.startsWith(this.state.text)) {
+          return (
+            <FoodPreview
+              foodName={element.Display_Name}
+              foodCalories={element.Calories}
+              foodPortion={element.Portion_Display_Name}
+            />
+          );
+        }
+      }
     });
-
-    console.log(displayFood);
 
     return (
       <React.Fragment>
@@ -30,14 +37,15 @@ class MainSection extends Component {
           style={searchStyle}
           onChange={(e) => this.setState({ text: e.target.value })}
         />
-        <Button variant="contained" color="primary" style={searchStyle}>
-          Search
-        </Button>
-        <Button variant="contained" color="secondary" style={searchStyle}>
+        <Button
+          variant="contained"
+          color="secondary"
+          style={searchStyle}
+          onClick={(e) => this.setState({ text: "" })}
+        >
           Clear
         </Button>
-        {/* Pass the array in as props to FoodPreview component */}
-        <FoodPreview foodName={displayFood} />
+        {displayFood}
       </React.Fragment>
     );
   }
