@@ -15,21 +15,12 @@ class MainSection extends Component {
       marginTop: "200px",
     };
 
-    //Filter through JSON file from user input *ADD TO output component to keep it seperate?!*
-    const foodOutput = FoodData.map((food) => {
-      //Log to show data is being returned
-      if (this.state.text === food.Display_Name) {
-        return console.log(
-          "You have selected: " +
-            food.Display_Name +
-            ". There are " +
-            food.Calories +
-            " calories in a " +
-            food.Portion_Amount +
-            " portion."
-        );
-      }
+    const displayFood = FoodData.map((element) => {
+      // console.log(element.Display_Name);
+      return <FoodPreview foodName={element.Display_Name} />;
     });
+
+    console.log(displayFood);
 
     return (
       <React.Fragment>
@@ -45,7 +36,8 @@ class MainSection extends Component {
         <Button variant="contained" color="secondary" style={searchStyle}>
           Clear
         </Button>
-        <FoodPreview />
+        {/* Pass the array in as props to FoodPreview component */}
+        <FoodPreview foodName={displayFood} />
       </React.Fragment>
     );
   }

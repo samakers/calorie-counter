@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import { Grid, Paper } from "@material-ui/core";
 
 const style = {
-  Paper: { padding: 20, marginTop: 10, marginBottom: 10 },
+  Paper: { padding: 20, margin: 10, marginTop: 40 },
 };
 
 class FoodPreview extends Component {
-  state = {
-    foodOne: "Banana",
-    foodTwo: "Apple",
-  };
+  state = {};
   render() {
     return (
-      <Grid container>
-        <Grid item sm>
-          <Paper style={style.Paper}>{this.state.foodOne}</Paper>
-          <Paper style={style.Paper}>{this.state.foodTwo}</Paper>
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Grid item md>
+          <Paper style={style.Paper}>{this.props.foodName}</Paper>
         </Grid>
       </Grid>
     );
